@@ -7,8 +7,8 @@ class LoginPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get inputUsername () { return $('#username') }
-    get inputPassword () { return $('#password') }
+    get inputUsername () { return $('#normal_login_email') }
+    get inputPassword () { return $('#normal_login_password') }
     get btnSubmit () { return $('button[type="submit"]') }
 
     /**
@@ -18,14 +18,14 @@ class LoginPage extends Page {
     login (username, password) {
         this.inputUsername.setValue(username);
         this.inputPassword.setValue(password);
-        this.btnSubmit.click(); 
+        this.btnSubmit.click();
     }
 
     /**
      * overwrite specifc options to adapt it to page object
      */
     open () {
-        return super.open('login');
+        return super.open('user/login');
     }
 }
 

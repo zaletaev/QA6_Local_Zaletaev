@@ -1,0 +1,19 @@
+{
+  "name": "qa6_local_coding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rinsal/QA6_Local_Coding.git"
+  },
+  "author": "QA6",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rinsal/QA6_Local_Coding/issues"
+  },
+  "homepage": "https://github.com/rinsal/QA6_Local_Coding#readme"
+}

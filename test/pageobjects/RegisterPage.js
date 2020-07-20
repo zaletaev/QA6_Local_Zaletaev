@@ -1,8 +1,20 @@
-// const Page = require('./BasePage');
-//
-//
-// class RegisterPage extends Page {
-//
-// }
-//
-// module.exports = new RegisterPage();
+import HomePage from "./HomePage";
+
+
+class RegisterPage extends HomePage {
+    get header() { return $('h1')};
+    get firstNameFld() { return $('#user_login_firstName')};
+    get lastNameFld() { return $('#user_login_lastName')};
+    get emailFld() { return $('#user_login_email')};
+    get passwordFld() { return $('#user_login_password')};
+    get checkBoxAgreement() { return $('#user_login_agreement')};
+    get registerBtn() { return $('button[type="submit"]')};
+
+
+
+    open() {
+        super.open('/user/register');
+    }
+}
+
+export default new RegisterPage();

@@ -1,7 +1,9 @@
-import HomePage from "./HomePage";
+import BasePage from "./BasePage";
 
 
-class RegisterPage extends HomePage {
+class RegisterPage extends BasePage {
+
+
     get header() { return $('h1')};
     get firstNameFld() { return $('#user_login_firstName')};
     get lastNameFld() { return $('#user_login_lastName')};
@@ -9,7 +11,6 @@ class RegisterPage extends HomePage {
     get passwordFld() { return $('#user_login_password')};
     get checkBoxAgreement() { return $('#user_login_agreement')};
     get registerBtn() { return $('button[type="submit"]')};
-
 
 
     open() {

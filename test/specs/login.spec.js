@@ -4,4 +4,5 @@ describe('login as admin', () => {
   it('should login', () => {
     LoginPage.login()
   });
+
 });

@@ -8,6 +8,8 @@ describe('HOME PAGE MAIN ELEMENTS', function () {
     })
     it('header text Home Page ', function () {
         const text = HomePage.header.getText();
+
+
         expect(text).toEqual(homePage.header);
     });
     it('logo is displayed', function () {

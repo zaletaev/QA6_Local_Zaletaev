@@ -1,7 +1,7 @@
 export default class Page {
-  open() {
+  open(path) {
     browser.maximizeWindow();
-    browser.url('https://stage.localcoding.us');
+    browser.url(`https://stage.localcoding.us/${path}`);
   }
 
 }

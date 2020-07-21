@@ -8,13 +8,12 @@ class LoginPage extends MainPage{
   get submitBtn() { return $('[type="submit"]')}
   get skipBtn() { return $('//span[text()="Skip"]')}
 
-  open() {
-    super.open();
+  open(path) {
+    super.open('user/login');
   }
 
   login() {
     this.open();
-    this.loginBtn.click()
     this.username.setValue(userAdmin.email);
     this.password.setValue(userAdmin.password);
     this.submitBtn.click();

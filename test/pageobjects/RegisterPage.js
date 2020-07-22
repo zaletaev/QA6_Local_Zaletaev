@@ -11,6 +11,9 @@ class RegisterPage extends BasePage {
     get passwordFld() { return $('#user_login_password')};
     get checkBoxAgreement() { return $('#user_login_agreement')};
     get registerBtn() { return $('button[type="submit"]')};
+    get countryFld(){ return $('.ant-select-selection-item')};
+    get phoneFld(){ return $('[type="phone"]')};
+    get submitBtn(){ return $('//span[contains(text(),"Submit")]')};
 
 
     open() {

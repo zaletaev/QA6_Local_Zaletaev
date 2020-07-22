@@ -21,6 +21,7 @@ describe('REGISTER PAGE', function () {
         RegisterPage.checkBoxAgreement.click();
         RegisterPage.registerBtn.click();
         browser.pause(3000);
+
     });
 });
 

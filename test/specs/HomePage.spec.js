@@ -10,25 +10,25 @@ describe('HOME PAGE MAIN ELEMENTS', function () {
         const text = HomePage.header.getText();
 
 
-        expect(text).toEqual(homePage.header);
+        expect(text).eq(homePage.header);
     });
     it('logo is displayed', function () {
-        expect(HomePage.logo.isDisplayed()).toEqual(true);
+        expect(HomePage.logo.isDisplayed()).eq(true);
     });
     it('login button is displayed', function () {
-        expect(HomePage.loginBtn.isDisplayed()).toEqual(true);
+        expect(HomePage.loginBtn.isDisplayed()).eq(true);
     });
     it('register button is displayed', function () {
-        expect(HomePage.registerBtn.isDisplayed()).toEqual(true);
+        expect(HomePage.registerBtn.isDisplayed()).eq(true);
     });
     it('contact.us button is displayed', function () {
-        expect(HomePage.contactBtn.isDisplayed()).toEqual(true);
+        expect(HomePage.contactBtn.isDisplayed()).eq(true);
     });
     it('terms button is displayed', function () {
-        expect(HomePage.termsBtn.isDisplayed()).toEqual(true);
+        expect(HomePage.termsBtn.isDisplayed()).eq(true);
     });
     it('privacy button is displayed', function () {
-        expect(HomePage.privacyBtn.isDisplayed()).toEqual(true);
+        expect(HomePage.privacyBtn.isDisplayed()).eq(true);
     });
 
 });

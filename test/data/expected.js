@@ -1,5 +1,5 @@
 const homePage = {
-    header: "Home Page"
+    header: "Local Coding community"
 }
 const registerPage = {
     header: "Create an account"

@@ -4,7 +4,7 @@ import {userTC001} from '../data/input';
 import LoginPage from '../pageobjects/LoginPage';
 
 
-xdescribe('REGISTER PAGE', function () {
+describe('REGISTER PAGE', function () {
     before(() => {
         RegisterPage.open();
     })

@@ -20,12 +20,12 @@ describe('register user', () => {
     RegisterPage.password.setValue(userData.userNew.password)
     RegisterPage.checkbox.click();
     RegisterPage.registerBtn.click();
-    browser.waitUntil(()=> RegisterPage.hederRegister.isDisplayed())
+    browser.waitUntil(()=> RegisterPage.headerRegister.isDisplayed())
 
   });
 
   it('should have correct header on page step 2', () => {
-    expect(RegisterPage.hederRegister.getText()).toEqual(headers.headerStep2Page)
+    expect(RegisterPage.headerRegister.getText()).toEqual(headers.headerStep2Page)
   });
 
   it('should skip btn be clickable ', () => {
@@ -35,14 +35,14 @@ describe('register user', () => {
   it('should fill out form', () => {
     RegisterPage.phone.setValue(userData.userNew.phone)
     RegisterPage.submitBtn.click()
-    browser.waitUntil(()=> ProfilePage.header.getText()) === userData.userNew.headerName
+    browser.waitUntil(()=> ProfilePage.header.getText() === userData.userNew.headerName)
   });
 
   it('should login new user', () => {
     LoginPage.open()
-    LoginPage.userName.setValue(userData.userNew.email)
-    LoginPage.password.setValue(userData.userNew.password)
-    LoginPage.submitBtn.click();
+    LoginPage.inputEmail.setValue(userData.userNew.email)
+    LoginPage.inputPassword.setValue(userData.userNew.password)
+    LoginPage.loginBtn.click();
     browser.waitUntil(()=> ProfilePage.header.getText()===userData.userNew.headerName)
   });
 

@@ -1,5 +1,5 @@
-const LoginPage = require('../pageobjects/login.page');
-const SecurePage = require('../pageobjects/secure.page');
+const LoginPage = require('../../pageObjects/login.page');
+const SecurePage = require('../../pageObjects/secure.page');
 
 describe('LOGIN', () => {
     it('should login with valid credentials', () => {
@@ -12,5 +12,3 @@ describe('LOGIN', () => {
             'You logged into a secure area!');
     });
 });
-
-

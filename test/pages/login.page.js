@@ -1,4 +1,4 @@
-const Page = require('./Base.page');
+const Page = require('./page');
 
 /**
  * sub page containing specific selectors and methods for a specific page

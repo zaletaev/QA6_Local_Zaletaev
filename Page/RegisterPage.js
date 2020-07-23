@@ -18,7 +18,7 @@ class registerPage extends BasePage{
   get submitBtn(){ return $('[type="submit"]')}
   get skipBtn(){ return browser.$('//span[text()="Skip"]')}
   get header() { return $('h1')}
-  get hederRegister() { return $('h5')}
+  get headerRegister() { return $('h5')}
 
 
 

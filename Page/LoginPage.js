@@ -2,10 +2,15 @@ import BasePage from './BasePage';
 import userData from './../Data/userData';
 class LoginPage extends BasePage{
 
-  get userName() { return $('#normal_login_email')}
-  get password() { return $('#normal_login_password')}
-  get submitBtn() { return $('[type="submit"]')}
+  get inputEmail() { return $('#normal_login_email')}
+  get inputPassword() { return $('#normal_login_password')}
+  get loginBtn() { return $('[type="submit"]')}
   get header() { return $('h1')}
+  get linkGoogle() { return $('[data-provider-id="google.com"]')}
+  get linkFacebook() { return browser.$('//span[text()="Sign in with Facebook"]')}
+  get linkResetPassword() { return browser.$('//a[text()="Reset it"]')}
+  get linkCreateNewAccount() { return browser.$('//a[text()="Create one"]')}
+  get linkHomePage() { return $('.site-name')}
 
   open(path) {
     super.open('user/login');
@@ -13,9 +18,9 @@ class LoginPage extends BasePage{
 
   login() {
     this.open();
-    this.userName.setValue(userData.userAdmin.email);
-    this.password.setValue(userData.userAdmin.password);
-    this.submitBtn.click();
+    this.inputEmail.setValue(userData.userAdmin.email);
+    this.inputPassword.setValue(userData.userAdmin.password);
+    this.loginBtn.click();
 
     // browser.pause(2000)
   }

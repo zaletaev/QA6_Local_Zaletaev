@@ -45,4 +45,4 @@ describe('check login page', () => {
     browser.waitUntil(()=> ProfilePage.header.getText()===userData.userAdmin.headerAdmin)
   });
 
-});
+}); //

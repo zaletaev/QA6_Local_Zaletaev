@@ -1,5 +1,5 @@
 import BasePage from "./../pageObjects/Base.page";
-import {RegisterData} from "../20608/data/DataPage";
+
 
 class RegisterPage extends BasePage {
     get headerRegister() {
@@ -39,11 +39,11 @@ class RegisterPage extends BasePage {
     }
 
     get countryDropdown() {
-        return $$('.ant-select-item-option-content')[5];
+        return $$('.ant-select-item-option-content')[2];
 
     }
     get openDropdown(){
-        return  $('.ant-select.ant-select-lg.ant-select-single.ant-select-show-arrow').click();
+        return  $('.ant-select.ant-select-lg.ant-select-single.ant-select-show-arrow');
     }
     get phoneNumber() {
         return $('#user_login_phone')
@@ -59,16 +59,16 @@ class RegisterPage extends BasePage {
         this.TandAlinkClose.waitForDisplayed();
         this.TandAlinkClose.click();
     }
-    registerUser(firstName,lastName,email,password,phone) {
-        this.firstNameInput.setValue(firstName);
-        this.lastNameInput.setValue(lastName);
-        this.email.setValue(email);
-        this.password.setValue(password);
+    registerUser(data) {
+        this.firstNameInput.setValue(data.firstName);
+        this.lastNameInput.setValue(data.lastName);
+        this.email.setValue(data.email);
+        this.password.setValue(data.password);
         this.termsAndAgreements();
         this.registerBtn.click();
-        this.openDropdown;
+        this.openDropdown.click();
         this.countryDropdown.click();
-        this.phoneNumber.setValue(phone);
+        this.phoneNumber.setValue(data.phone);
         this.SubmitBtn.click();
 
     }

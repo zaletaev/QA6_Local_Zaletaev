@@ -12,13 +12,7 @@ describe('USER REGISTER', () => {
   });
 
   it('register user', function () {
-    RegisterPage.registerUser(
-      RegisterData.firstName,
-      RegisterData.lastName,
-      RegisterData.email,
-      RegisterData.password,
-      RegisterData.phone,
-    );
+    RegisterPage.registerUser(RegisterData);
     expect($('h1').getText()).eq(RegisterData.firstName + ' ' + RegisterData.lastName);
   });
 });

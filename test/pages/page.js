@@ -2,13 +2,17 @@ export default class Page {
     open(path) {
         browser.url(path);
     }
-    get registerBtn () {
+    get registerLink () {
         return $('[href="/user/register"]');
     }
-    get loginBtn () {
+    get loginLink () {
         return $('[href="/user/login"]');
     }
     get header() {
         return $('h1');
+    }
+
+    get homePageLink() {
+        return $('.site-name');
     }
 }

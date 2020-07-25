@@ -39,6 +39,20 @@ class RegisterPage extends Page {
         this.submitBtn.click();
     }
 
+    get agreementBtn () {
+        return $('button.ant-btn-link');
+    }
+
+    get agreementDrawer () {
+        return $('div.ant-drawer-body');
+    }
+
+    get drawerCloseBtn () {
+        return $('button[aria-label="Close"]');
+    }
+
+
+
     open() {
         super.open('/user/register');
     }

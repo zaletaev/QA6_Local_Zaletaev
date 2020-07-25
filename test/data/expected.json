@@ -1,5 +1,6 @@
 {
   "registerPageData": {
-    "header": "Create an account"
+    "header": "Create an account",
+    "agreementLabel":"I have readTerms and agreements"
   }
 }

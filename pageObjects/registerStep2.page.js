@@ -1,6 +1,11 @@
 import BasePage from './../pageObjects/Base.page';
 
 class RegisterStep2Page extends BasePage {
+
+  get headerRegisterStep2() {
+    return $('h5');
+  }
+
   get openDropdown() {
     return $('.ant-select.ant-select-lg.ant-select-single.ant-select-show-arrow');
   }

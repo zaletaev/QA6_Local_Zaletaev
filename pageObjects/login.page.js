@@ -1,7 +1,7 @@
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-import BasePage_ from './Base.page';
+import BasePage from './Base.page';
 
 class LoginPage extends BasePage {
   /**

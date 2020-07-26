@@ -35,13 +35,37 @@ class RegisterPage extends BasePage {
   }
 
   get registerBtn() {
-    return $('.ant-btn.ant-btn-primary.ant-btn-lg');
+    return $('button[type="submit"]');
+  }
+
+  get eyeIconClosed () {
+    return $('.anticon-eye-invisible');
+  }
+
+  get agreementLabel () {
+    return $('.ant-checkbox-wrapper');
+  }
+
+  get agreementDrawer () {
+    return $('div.ant-drawer-body');
+  }
+
+  get drawerCloseBtn () {
+    return $('button[aria-label="Close"]');
+  }
+
+  get promptLabel () {
+    return $('p');
+  }
+
+  get loginLink () {
+    return $('a[href="/user/login"]')
   }
 
   termsAndAgreements() {
     this.agreementCheckBox.click();
     this.termsAndAgreementsLink.click();
-    this.termsAndAgreementsLinkClose.waitForDisplayed({ timeout: 10000 });
+    this.termsAndAgreementsLinkClose.waitForClickable({ timeout: 5000 });
     this.termsAndAgreementsLinkClose.click();
   }
 

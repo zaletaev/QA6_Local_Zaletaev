@@ -51,6 +51,20 @@ class RegisterPage extends Page {
         return $('button[aria-label="Close"]');
     }
 
+    get eyeIconClosed () {
+        return $('.anticon-eye-invisible');
+    }
+
+    get promptLabel () {
+        return $('p');
+    }
+
+    get loginLink () {
+        return $('a[href="/user/login"]')
+    }
+
+
+
 
 
     open() {

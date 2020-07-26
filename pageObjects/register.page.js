@@ -41,7 +41,7 @@ class RegisterPage extends BasePage {
   termsAndAgreements() {
     this.agreementCheckBox.click();
     this.termsAndAgreementsLink.click();
-    this.termsAndAgreementsLinkClose.waitForDisplayed({ timeout: 10000 });
+    this.termsAndAgreementsLinkClose.waitForClickable({ timeout: 5000 });
     this.termsAndAgreementsLinkClose.click();
   }
 

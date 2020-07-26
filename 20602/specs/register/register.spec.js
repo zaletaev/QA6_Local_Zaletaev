@@ -67,7 +67,6 @@ describe('TEST REGISTER PAGE ELEMENTS', () => {
     browser.pause(3000);
     RegisterPage.drawerCloseBtn.click();
     browser.waitUntil(() => RegisterPage.agreementDrawer.isDisplayed() === false);
-
   });
 
   it('should verify text of prompt label', function() {

@@ -4,6 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "20601": "npx wdio wdio.conf.js --suite 20601",
+    "20602": "npx wdio wdio.conf.js --suite 20602",
+    "20603": "npx wdio wdio.conf.js --suite 20603",
+    "20605": "npx wdio wdio.conf.js --suite 20605",
+    "20606": "npx wdio wdio.conf.js --suite 20606",
+    "20607": "npx wdio wdio.conf.js --suite 20607",
+    "20608": "npx wdio wdio.conf.js --suite 20608",
+    "20609": "npx wdio wdio.conf.js --suite 20609",
+    "20610": "npx wdio wdio.conf.js --suite 20610",
+    "20611": "npx wdio wdio.conf.js --suite 20611",
     "test": "npx wdio wdio.conf.js",
     "report": "allure generate allure-results --clean && allure open"
   },
@@ -33,5 +43,8 @@
     "chromedriver": "^84.0.0",
     "prettier": "^2.0.5",
     "wdio-chromedriver-service": "^6.0.3"
+  },
+  "dependencies": {
+    "faker": "^4.1.0"
   }
 }

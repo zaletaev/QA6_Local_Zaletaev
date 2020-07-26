@@ -1,7 +1,9 @@
-import RegisterPage from "../../pages/register.page";
-import HomePage from "../../pages/home.page"
+//import RegisterPage from "../../pages/register.page";
+import HomePage from "../../../pageObjects/home.page"
 import expected from '../../data/expected.json';
 import LoginPage from '../../pages/login.page';
+import RegisterPage from "../../../pageObjects/register.page";
+import user from '../../data/users';
 
 before(() => {
   HomePage.open();
@@ -33,11 +35,11 @@ describe('TEST REGISTER PAGE ELEMENTS', () => {
   });
 
   it('should verify emailInput is present', function () {
-    expect(RegisterPage.emailInput.isDisplayed()).true;
+    expect(RegisterPage.email.isDisplayed()).true;
   });
 
   it('should verify passwordInput is present', function () {
-    expect(RegisterPage.passwordInput.isDisplayed()).true;
+    expect(RegisterPage.password.isDisplayed()).true;
   });
 
   it('should verify eye icon is present', function() {
@@ -45,11 +47,11 @@ describe('TEST REGISTER PAGE ELEMENTS', () => {
   });
 
   it('should verify submitBtn is disabled by default', function () {
-    expect(RegisterPage.submitBtn.isEnabled()).false;
+    expect(RegisterPage.registerBtn.isEnabled()).false;
   });
 
   it('should verify agreementCheckbox is disabled by default', function () {
-    expect(RegisterPage.agreementCheckbox.isSelected()).false;
+    expect(RegisterPage.agreementCheckBox.isSelected()).false;
   });
 
   it('should verify agreementLabel text', function () {
@@ -57,7 +59,7 @@ describe('TEST REGISTER PAGE ELEMENTS', () => {
   });
 
   it('should verify agreementDrawer pops-up when agreementBtn is clicked', function () {
-    RegisterPage.agreementBtn.click();
+    RegisterPage.termsAndAgreementsLink.click();
     expect(RegisterPage.agreementDrawer.isDisplayed()).true;
   });
 
@@ -73,53 +75,14 @@ describe('TEST REGISTER PAGE ELEMENTS', () => {
     expect(RegisterPage.promptLabel.getText()).eq(expected.registerPageData.promptLabel);
   });
 
+  it('check that registration works', function() {
+    browser.refresh();
+    RegisterPage.registerUser(user);
+  })
+
   it('should verify login link is working', function() {
     RegisterPage.loginLink.click();
     expect(LoginPage.header.getText()).eq(expected.loginPageData.header);
   });
 
 });
-
-
-
-
-// describe('REGISTER NEW USER AND VERIFY USER EXISTS', () => {
-//   it('should fill out and submit form', () => {
-//     RegisterPage.firstNameInput.setValue(testUser.firstName);
-//     RegisterPage.lastNameInput.setValue(testUser.lastName);
-//     RegisterPage.emailInput.setValue(testUser.email);
-//     RegisterPage.passwordInput.setValue(testUser.password);
-//     browser.pause(1000);
-//     RegisterPage.submitForm();
-//     browser.pause(1000);
-//   });
-//
-//   it('should go to user page and verify the page is correct', () => {
-//     LoginPage.open();
-//     expect(LoginPage.header.getText()).eq('User Login');
-//   });
-//
-//   it('should verify user has been created', () => {
-//     LoginPage.open();
-//     LoginPage.emailInput.setValue(testUser.email);
-//     LoginPage.passwordInput.setValue(testUser.password);
-//     LoginPage.loginBtn.click();
-//     browser.pause(2000);
-//     expect(LoginPage.header.getText()).eq('You are a new user');
-//   });
-//
-//   it('should verify user exists in the database', async () => {
-//     const response = await axios({
-//       method: 'POST',
-//       url: 'https://server-stage.pasv.us/user/login',
-//       data: {
-//         email: testUser.email,
-//         password: testUser.password,
-//       },
-//     })
-//       .then(res => res)
-//       .catch(err => err);
-//     expect(response.status).eq(200);
-//  });
-
-

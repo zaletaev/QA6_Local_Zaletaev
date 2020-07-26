@@ -35,7 +35,31 @@ class RegisterPage extends BasePage {
   }
 
   get registerBtn() {
-    return $('.ant-btn.ant-btn-primary.ant-btn-lg');
+    return $('button[type="submit"]');
+  }
+
+  get eyeIconClosed () {
+    return $('.anticon-eye-invisible');
+  }
+
+  get agreementLabel () {
+    return $('.ant-checkbox-wrapper');
+  }
+
+  get agreementDrawer () {
+    return $('div.ant-drawer-body');
+  }
+
+  get drawerCloseBtn () {
+    return $('button[aria-label="Close"]');
+  }
+
+  get promptLabel () {
+    return $('p');
+  }
+
+  get loginLink () {
+    return $('a[href="/user/login"]')
   }
 
   termsAndAgreements() {

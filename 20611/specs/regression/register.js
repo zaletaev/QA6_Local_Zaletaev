@@ -1,5 +1,4 @@
 import RegisterPage from '../../../pageObjects/register.page';
-
 import { registration, user } from '../testData/users';
 
 describe('New user registration page', () => {

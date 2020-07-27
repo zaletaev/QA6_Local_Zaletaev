@@ -62,6 +62,10 @@ class RegisterPage extends BasePage {
     return $('a[href="/user/login"]')
   }
 
+  get errorIncorrectEmail(){
+    return $('.ant-form-item-explain  div');
+  }
+
   termsAndAgreements() {
     this.agreementCheckBox.click();
     this.termsAndAgreementsLink.click();

@@ -12,7 +12,9 @@ const email = Math.random().toFixed(10) + '@gmail.com';
     firstName: 'Test',
     lastName: 'Test',
     email: email,
+    incorrectEmail: 'test@gmailcom',
     password: 'abc123',
+    phone: '9048483838'
   };
 
   export {registration,user};

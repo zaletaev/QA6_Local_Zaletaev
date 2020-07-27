@@ -13,9 +13,9 @@ const textLogin = {
   header: 'Welcome back!',
 };
 
-const userStep1 = {
-  firstNameInput: 'Test',
-  lastNameInput: 'Test',
+const data = {
+  firstName: 'Test',
+  lastName: 'Test',
   email,
   password: 'abc123',
 };
@@ -30,4 +30,4 @@ const Admin = {
   passwordAdmin: '123123',
 };
 
-export { textStep1, userStep1, textLogin, textStep2, userStep2, Admin };
+export { textStep1, textLogin, textStep2, userStep2, Admin, data };

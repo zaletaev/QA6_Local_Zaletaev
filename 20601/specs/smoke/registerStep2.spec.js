@@ -11,12 +11,12 @@ describe('USER REGISTER STEP2', () => {
 
   it('should populate fields and submit form', () => {
     RegisterStep2Page.registerUser(data);
-  //  expect(ProfilePage.profilePageHeader.getText()).contains(userStep1.firstName);
+    //expect(ProfilePage.profilePageHeader.getText()).contains(data.firstName);
   });
 
   xit('should skip the Registration Step2 and open Main Page', function () {
     RegisterStep2Page.open();
     RegisterStep2Page.skipBtn.click();
-    expect(ProfilePage.profilePageHeader.getText()).contains(userStep1.firstName);
+    //expect(ProfilePage.profilePageHeader.getText()).contains(data.firstName);
   });
 });

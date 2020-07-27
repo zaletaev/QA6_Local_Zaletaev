@@ -1,7 +1,7 @@
-import LoginPage from '../pageobjects/LoginPage';
-import ProfilePage from '../pageobjects/ProfilePage';
-import { textLogin, Admin } from '../data/registerAndLogin.data';
-import { textProfile } from '../data/profile.data';
+import LoginPage from '../../../pageObjects/login.page';
+import ProfilePage from '../../pageObjects/profile.page';
+import { textLogin, Admin } from '../../data/registerAndLoginData';
+import { textProfile } from '../../data/profile.data';
 
 
 describe('VERIFY SUCCESSFUL LOGIN', () => {

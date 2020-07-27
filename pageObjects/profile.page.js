@@ -5,6 +5,10 @@ class ProfilePage extends BasePage {
     return $('h1');
   }
 
+  get badge() {
+    return $('.ant-badge');
+  }
+
   getLoginConfirmation() {
     return this.headerProfile.getText();
   }

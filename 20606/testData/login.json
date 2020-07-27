@@ -7,5 +7,13 @@
   "TC-2": {
     "username": "student2006@qa6.us",
     "password": "123"
+  },
+
+  "TC-5": {
+    "email": "student_20606@qa6.us"
+  },
+
+  "TC-6": {
+    "email": "fdsdfd@gfgfd.net"
   }
 }

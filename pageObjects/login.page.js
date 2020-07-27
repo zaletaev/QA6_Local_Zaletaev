@@ -1,6 +1,7 @@
 import BasePage from '../pageObjects/Base.page';
 import ProfilePage from '../pageObjects/profile.page';
 import RegistrationPage from '../pageObjects/register.page';
+import ResetPasswordPage from '../pageObjects/reset.password';
 
 class LoginPage extends BasePage {
   get headerLogin() {
@@ -28,11 +29,11 @@ class LoginPage extends BasePage {
   }
 
   get registerLink() {
-    return $$('p>a')[0];
+    return $('a[href="/user/register"]');
   }
 
   get resetLink() {
-    return $$('p>a')[1];
+    return $('a[href="/user/password/reset"]');
   }
 
   get errorMessageCloseBtn() {
@@ -74,7 +75,7 @@ class LoginPage extends BasePage {
 
   goToResetPasswordPage() {
     this.resetLink.click();
-    return ResetPasswordPage; //TODO match to the class to be created and add import
+    return ResetPasswordPage;
   }
 }
 

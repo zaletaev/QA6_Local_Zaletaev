@@ -13,14 +13,13 @@ describe('USER REGISTER', () => {
     expect(RegisterPage.headerRegister.getText()).eq(textStep1.header);
   });
 
-  it('should verify that Terms and agreements work', function() {
+  xit('should verify that Terms and agreements work', function() {
     RegisterPage.termsAndAgreements();
-
   });
 
   it('should populate fields and submit form', () => {
     RegisterPage.registerUser(data);
-  //  expect(RegisterStep2Page.headerStep2.getText()).contains(textStep2.header);
+    expect(RegisterStep2Page.headerStep2.getText()).contains(textStep2.header);
   });
 
   // it('should populate fields and submit form', () => {

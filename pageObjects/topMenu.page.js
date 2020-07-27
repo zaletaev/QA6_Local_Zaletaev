@@ -43,7 +43,7 @@ class TopMenuPage extends BasePage {
   get coinImg() {
     return $('.ml-auto img');
   }
-  get achivementsLink() {
+  get achievementsLink() {
     return $('.ml-auto span');
   }
 
@@ -66,10 +66,10 @@ class TopMenuPage extends BasePage {
     return $$('.ant-dropdown-menu-item-only-child')[2];
   }
 
-  get loginlnk() {
+  get loginLink() {
     return $('[href="/user/login"]');
   }
-  get registerlnk() {
+  get registerLink() {
     return $('[href="/user/register"]');
   }
 
